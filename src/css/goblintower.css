@@ -1,0 +1,473 @@
+.hidden{
+	display: none !important;
+}
+#goblintower #gameWindow{
+	width: 600px;
+	height: 120px;
+	position: relative;
+	margin: auto;
+	overflow: hidden;
+	margin-top: 40px;
+	margin-bottom: 20px;
+	border: solid;
+	border-radius: 10px;
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+#goblintower #titleDiv{
+	width: 100%;
+	text-align: center;
+}
+#goblintower #titleDiv h1{
+	width: fit-content;
+	margin:auto;
+	padding: 20px;
+	padding-top: 15px;
+	font-size: 40px;
+	font-weight: bold;
+	border: 5px dashed;
+	border-radius: 5px;
+	background-color: white;
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+	color: black;
+}
+#goblintower #bgBox{
+	height: 120px;
+	width: 1600px;
+	background-image: url("../../public/static/img/basic-bg.png");
+	background-position: center bottom;
+	background-repeat: repeat-x;
+}
+#goblintower .slide{
+	animation: slider 1s ease-in-out;
+}
+@keyframes slider {
+	from{
+		transform: translate3d(0,0,0);
+	}
+	to{
+		transform: translate3d(-586px,0,0);
+	}
+}
+#goblintower #darkTransition{
+	width: 600px;
+	height: 120px;
+	background-color: #000;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	opacity: 0;
+}
+#goblintower #fullTransition{
+	width: 100vw;
+	height: 100vh;
+	background-color: #000;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	opacity: 0;
+	display: none;
+}
+#goblintower #darkTransition.start{
+	animation: fadeinout 0.5s ease-in-out;
+}
+#goblintower #fullTransition.start{
+	animation: fadeinout 0.7s linear;
+	display: block;
+}
+@keyframes fadeinout {
+	0%{
+		opacity: 0;
+	}
+	30%{
+		opacity: 1;
+	}
+	70%{
+		opacity: 1;
+	}
+	100%{
+		opacity: 0;
+	}
+}
+#goblintower #controlWindow{
+	width: 600px;
+	height: 120px;
+	margin: auto;
+	text-align: center;
+}
+
+#goblintower #heroBox{
+	position: absolute;
+	left:10%;
+	bottom: 0%;
+	text-align: center;
+	margin-bottom: 10px;
+}
+#goblintower #goblinBox{
+	position: absolute;
+	right:10%;
+	bottom: 0%;
+	text-align: center;
+	margin-bottom: 7px;
+}
+
+@keyframes attackRight {
+	0% {
+		left: 10%;
+	}
+	40%{
+		left: 75%;
+	}
+	60%{
+		left: 75%;
+	}
+	100% {
+		left: 10%;
+	}
+}
+
+@keyframes attackLeft {
+	0% {
+		right: 10%;
+	}
+	40%{
+		right: 75%;
+	}
+	60%{
+		right: 75%;
+	}
+	100% {
+		right: 10%;
+	}
+}
+
+@keyframes hop {
+	0% {
+		bottom: 0%;
+	}
+	50% {
+		bottom: 30%;
+	}
+	100%{
+		bottom: 0%;
+	}
+}
+#goblintower #goblinBox.attack{
+	animation: attackLeft;
+	animation-duration: 1s;
+	animation-timing-function: ease-in-out;
+
+}
+#goblintower #heroBox.attack{
+	animation: attackRight;
+	animation-duration: 1s;
+	animation-timing-function: ease-in-out;
+}
+#goblintower #heroBox.step{
+	animation: hop;
+	animation-duration: 0.8s;
+	animation-delay: 0.1s;
+	animation-timing-function: ease-in-out;
+}
+#goblintower #heroInfo2, #goblintower #goblinInfo{
+	color: white;
+}
+#goblintower #gdamageNumber, #goblintower #hdamageNumber{
+	position: absolute;
+	color: white;
+	top: 35%;
+	left: 61%;
+}
+#goblintower #ghitsplat, #goblintower #ghitsplatzero, #goblintower #hhitsplat, #goblintower #hhitsplatzero{
+	position: absolute;
+	top: 25%;
+	left: 45%;
+}
+#goblintower #panelWindows{
+	text-align: center;
+	margin-top: 30px;
+}
+#goblintower #panelWindows > *{
+	text-align: center;
+	margin-left: 3%;
+	margin-right: 3%;
+	border: solid;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	display: inline-block;
+	vertical-align: top;
+	background-color: white;
+	border-radius: 10px;
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+#goblintower #gameOverWindow{
+	text-align: center;
+	border: solid;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	display: inline-block;
+	vertical-align: top;
+	background-color: white;
+	border-radius: 10px;
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+	width: 25%;
+	margin-top: 30px;
+	height: 400px;
+	position: relative;
+	left: 50%;
+	transform: translate(-50%);
+}
+#goblintower #gameOverWindow p{
+	line-height: 20px;
+}
+#goblintower #resetButton{
+	bottom: 0;
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%);
+	margin-bottom: 10px;
+	height: 70px;
+	width: 100px;
+	word-wrap: break-word;
+}
+#goblintower #newgameButton{
+	position: absolute;
+	left: 50%;
+	top:20%;
+	transform: translate(-50%);
+	width: 200px;
+	height: 100px;
+	font-size: 20px;
+}
+#goblintower #heroWindow{
+	width: 22%;
+	height: 380px;
+}
+#goblintower #attributes{
+	width: fit-content;
+	text-align: left;
+	margin-left:10%;
+}
+#goblintower .avatarImg{
+	object-fit: cover;
+	border: solid #000;
+	padding: 1px;
+	background-color: #dad5d5;
+}
+#goblintower .avatar{
+	display: flex;
+	margin-bottom: 10px;
+	align-items: center;
+	flex-direction: column;
+}
+#goblintower.avatarName{
+	text-align: center;
+}
+
+#goblintower #shopWindow{
+	width: 30%;
+	margin-left: 3%;
+	animation: expand .25s;
+}
+
+@keyframes expand {
+	from {
+		transform: scale(0);
+	}
+	to {
+		transform: scale(1);
+	}
+}
+
+#goblintower #twocol{
+	width: 100%;
+	display: block;
+	height: 350px;
+}
+#goblintower #potions{
+	width: 45%;
+	height: 100%;
+	margin-left: 5%;
+	float: left;
+}
+#goblintower .shopitem{
+	display: inline-block;
+	width: 100px;
+	height: 100px;
+}
+#goblintower .shopitem button{
+	width: 75px;
+	height: 75px;
+}
+#goblintower #consumableInfo{
+	width: 250px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	text-align: center;
+	border: solid;
+	display: inline-block;
+	vertical-align: middle;
+	background-color: white;
+	border-radius: 10px;
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+#goblintower .bigbutton{
+	display: inline-block;
+	vertical-align: middle;
+	margin: 10px;
+	width: 100px;
+	height: 70px;
+}
+#goblintower .itembutton{
+	width: 70px;
+	height: 70px;
+}
+#goblintower #upgrades{
+	width: 45%;
+	height: 100%;
+	margin-right: 5%;
+	float: right;
+}
+#goblintower #eventWindow{
+	width: 22%;
+	height: 380px;
+	background-color: white;
+	border-radius: 10px;
+}
+#goblintower #eventLog{
+	border: solid;
+	height: 330px;
+	margin: 10px;
+	overflow: hidden;
+	text-align: left;
+	padding-left: 10px;
+	border: none;
+}
+#goblintower .hpbar{
+	width: 50px;
+	height: 10px;
+	background-color: red;
+	margin: auto;
+	margin-bottom: 5px;
+	background: rgb(255,0,0);
+	background: linear-gradient(90deg, rgba(0,255,0,1) 0%, rgba(0,255,0,1) 35%, rgba(255,0,0,1) 35%, rgba(255,0,0,1) 100%);
+}
+
+/* CSS */
+#goblintower .button-4 {
+  appearance: none;
+  background-color: #FAFBFC;
+  border: 1px solid rgba(27, 31, 35, 0.15);
+  border-radius: 6px;
+  box-shadow: rgba(27, 31, 35, 0.04) 0 1px 0, rgba(255, 255, 255, 0.25) 0 1px 0 inset;
+  box-sizing: border-box;
+  color: #24292E;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  list-style: none;
+  position: relative;
+  transition: background-color 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+}
+
+#goblintower .button-4:hover {
+  background-color: #F3F4F6;
+  text-decoration: none;
+  transition-duration: 0.1s;
+}
+
+#goblintower .button-4:disabled {
+  background-color: #FAFBFC;
+  border-color: rgba(27, 31, 35, 0.15);
+  color: #959DA5;
+  cursor: default;
+}
+
+#goblintower .button-4:active {
+  background-color: #EDEFF2;
+  box-shadow: rgba(225, 228, 232, 0.2) 0 1px 0 inset;
+  transition: none 0s;
+}
+
+#goblintower .button-4:focus {
+  outline: 1px transparent;
+}
+
+#goblintower .button-4:before {
+  display: none;
+}
+
+#goblintower .button-4:-webkit-details-marker {
+  display: none;
+}
+
+#goblintower .tooltip {
+	position: relative;
+	display: block;
+	margin-top: 2px;
+    margin-bottom: 2px;
+	font-size: 12pt;
+	line-height: 12pt;
+}
+  
+#goblintower .tooltip .tooltiptext {
+	visibility: hidden;
+	width: 180px;
+	background-color: rgb(202, 202, 202);
+	color: #000000;
+	text-align: center;
+	border-radius: 6px;
+	padding: 5px;
+	position: absolute;
+	z-index: 1;
+	left: 110%;
+	top: 50%;
+	font-size: 10pt;
+	transform: translateY(-50%);
+}
+
+#goblintower .tooltip .tooltiptext::after {
+	content: " ";
+	position: absolute;
+	top: 50%;
+	right: 100%; /* To the left of the tooltip */
+	margin-top: -5px;
+	border-width: 5px;
+	border-style: solid;
+	border-color: transparent rgb(202, 202, 202) transparent transparent;
+  }
+  
+  /* Show the tooltip text when you mouse over the tooltip container */
+#goblintower .tooltip:hover .tooltiptext {
+	visibility: visible;
+}
+
+#goblintower h4{
+	font-weight: bold;
+	font-size: 14pt;
+	margin-bottom: 10px;
+}
+
+#goblintower h3{
+	font-weight: bold;
+	font-size: 16pt;
+	margin-bottom: 5px;
+}
+
+#goblintower h2{
+	font-weight: bold;
+	font-size: 20pt;
+	margin-bottom: 10px;
+}
+
+#goblintower{
+	color: black;
+}

@@ -1,0 +1,43 @@
+#apiScreen .formSelector button{
+    margin: 10px;
+    padding: 10px;
+}
+
+#apiScreen form{
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 10px 20px;
+    width: 60%;
+    left: calc(50% - 100px);
+    transform: translateX(-50%);
+    position: relative;
+}
+
+#apiScreen label {
+    text-align: right;
+}
+
+#apiScreen input {
+    width: 100%;
+}
+
+#apiScreen form button, #apiScreen form select{
+    grid-column: 2 / 3;
+}
+
+#apiScreen form label{
+    grid-column: 1 / 2;
+}
+
+.dvdInfo{
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 10px;
+}
+
+#apiScreen .searchResults{
+    width: 60%;
+    margin: 30px auto 0;
+}

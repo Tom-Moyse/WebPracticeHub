@@ -1,0 +1,47 @@
+#canvas {
+    position: fixed;
+    top: 0;
+    z-index: -1;
+    display: block;
+}
+
+#controlForm ul{
+    width: 100%;
+    text-align: center;
+    display: block;
+    margin-top: 20px;
+}
+
+
+#controlForm li{
+    display: inline-block;
+    height: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#controlForm li *{
+    display: block;
+}
+
+.hidden{
+    display: none !important;
+}
+
+#button-box > button{
+    margin: 25px 10px 0px;
+    border-radius: 3px;
+    padding: 5px;
+    background-color: #3f3f3f;
+    color: inherit;
+    border: none;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+    z-index: 1;
+    position: relative;
+}
+  
+#button-box > button:hover, #button-box > button:disabled{
+    background-color: #2b2b2b;
+}
